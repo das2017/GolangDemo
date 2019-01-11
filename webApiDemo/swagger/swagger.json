@@ -1,0 +1,117 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "beego Test API",
+        "description": "beego has a very cool tools to autogenerate documents for your API",
+        "version": "1.0.0",
+        "termsOfService": "http://beego.me/",
+        "contact": {
+            "email": "astaxie@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/pay/PayAdd": {
+            "post": {
+                "tags": [
+                    "pay"
+                ],
+                "description": "PayAdd",
+                "operationId": "PayController.PayAdd",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for user content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PaymentAddRequset"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{paymentRecord} models.PaymentRecord"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pay/PayQuery": {
+            "post": {
+                "tags": [
+                    "pay"
+                ],
+                "description": "PayQuery",
+                "operationId": "PayController.PayQuery",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for user content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PaymentQueryRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{paymentRecord} models.PaymentRecord"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.PaymentAddRequset": {
+            "title": "PaymentAddRequset",
+            "type": "object",
+            "properties": {
+                "AccountID": {
+                    "type": "string"
+                },
+                "Amount": {
+                    "type": "string"
+                },
+                "CreateTime": {
+                    "type": "string"
+                },
+                "OuterTradeNo": {
+                    "type": "string"
+                },
+                "PartnerID": {
+                    "type": "string"
+                },
+                "Remark": {
+                    "type": "string"
+                },
+                "UserID": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.PaymentQueryRequest": {
+            "title": "PaymentQueryRequest",
+            "type": "object",
+            "properties": {
+                "AccountID": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "pay",
+            "description": "Operations about Users\n"
+        }
+    ]
+}

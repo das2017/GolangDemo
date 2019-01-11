@@ -1,0 +1,33 @@
+<seelog levels="trace,debug,info,warn,error,critical">
+     <outputs formatid="main">
+         <!-- 对控制台输出的Log按级别分别用颜色显示。6种日志级别我仅分了三组颜色，如果想每个级别都用不同颜色则需要简单修改即可 -->
+         <filter levels="trace,debug,info">
+             <console formatid="colored-default"/>
+         </filter>
+         <filter levels="warn">
+             <console formatid="colored-warn"/>
+         </filter>
+         <filter levels="error">
+             <console formatid="colored-error"/>
+         </filter>
+         <filter levels="critical">
+             <console formatid="colored-critical"/>
+         </filter>
+         
+         <rollingfile formatid="main" type="date" filename="./log/roll.log"   maxrolls="366" datepattern="02.01.2006" />
+		<filter levels="error">
+            <file path="./log/error.log"/>            
+        </filter>
+		<filter levels="critical">
+		    <file path="./log/fatal.log"/>
+		</filter> 
+     </outputs>
+     <formats>
+         <format id="colored-default"  format="%EscM(38)%Date %Time [%LEV] %File:%Line | %Msg%n%EscM(0)"/>
+         <format id="colored-warn"  format="%EscM(33)%Date %Time [%LEV] %File:%Line | %Msg%n%EscM(0)"/>
+         <format id="colored-error"  format="%EscM(31)%Date %Time [%LEV] %File:%Line | %Msg%n%EscM(0)"/>
+		<format id="colored-critical" format="%EscM(31)%Date %Time [FAT] %File:%Line | %Msg%n%EscM(0)"/>
+         <format id="main" format="%Date %Time [%LEV] %File:%Line | %Msg%n"/>
+
+     </formats>
+</seelog>
