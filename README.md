@@ -1,5 +1,5 @@
 # GolangDemo
-Golang案例代码
+Golang演示代码
 
 ## 新书上市：
 + 京东链接：https://item.jd.com/12477683.html
