@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/go-redis/redis"
-	"github.com/golangDemo/redisDemo/models"
+	"github.com/GolangDemo/redisDemo/models"
 )
 
 func main() {
