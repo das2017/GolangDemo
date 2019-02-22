@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
-	"github.com/golangDemo/webDemo/models"
+	"github.com/GolangDemo/webDemo/models"
 )
 
 type MainController struct {
