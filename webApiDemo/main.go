@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "github.com/olangDemo/webApiDemo/routers"
+	_ "github.com/GolangDemo/webApiDemo/routers"
 
 	"github.com/astaxie/beego"
 )
