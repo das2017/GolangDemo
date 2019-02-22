@@ -3,7 +3,7 @@ Golang演示代码
 + 编程工具：LiteIDE
 + 操作系统：Ubuntu
 + Console运行命令：go run send.go 或 go run receive.go
-+ WEB运行命令：bee run --gendoc=true --downdoc=true
++ Web运行命令：bee run --gendoc=true --downdoc=true
 
 ## 新书上市：
 + 京东链接：https://item.jd.com/12477683.html
