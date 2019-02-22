@@ -2,8 +2,7 @@
 Golang演示代码
 + 编程工具：LiteIDE
 + 操作系统：Ubuntu
-+ 运行命令：go run send.go
-+ 运行命令：go run receive.go
++ 运行命令：go run send.go 或 go run receive.go
 + web运行命令：bee run --gendoc=true --downdoc=true
 
 ## 新书上市：
