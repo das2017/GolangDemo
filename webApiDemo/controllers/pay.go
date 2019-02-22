@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 
-	"github.com/golangDemo/webApiDemo/models"
+	"github.com/GolangDemo/webApiDemo/models"
 
 	"github.com/astaxie/beego"
 )
